@@ -36,7 +36,17 @@ aria-hidden="true">
     <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
     <div class="modal-footer">
         <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-        <a class="btn btn-primary" href="login.html">Logout</a>
+        <a class="btn btn-primary" href="{{ route('logout') }}"
+            onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();">
+            {{ __('Logout') }}
+        </a>
+
+        <form id="logout-form" action="{{ route('logout') }}" method="POST"
+            class="d-none">
+            @csrf
+        </form>
+        {{-- <a class="btn btn-primary" href="login.html">Logout</a> --}}
     </div>
 </div>
 </div>
@@ -51,7 +61,12 @@ aria-hidden="true">
 
 <!-- Custom scripts for all pages-->
 <script src="{{ asset('fronts/js/sb-admin-2.min.js') }}"></script>
+ <!-- Page level plugins -->
+ <script src="{{ asset('fronts/vendor/chart.js/Chart.min.js') }}"></script>
 
+ <!-- Page level custom scripts -->
+ <script src="{{ asset('fronts/js/demo/chart-area-demo.js') }}"></script>
+ <script src="{{ asset('fronts/js/demo/chart-pie-demo.js') }}"></script>
 </body>
 
 </html>

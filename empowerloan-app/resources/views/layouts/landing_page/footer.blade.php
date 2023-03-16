@@ -36,7 +36,7 @@
             </a>
         </div>
         <div class="copyright">
-            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved - Creative Tim
         </div>
     </div>
 </footer>

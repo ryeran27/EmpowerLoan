@@ -18,7 +18,7 @@
                             <img src="{{ asset('landing/assets/img/new_logo.png') }}" alt="Creative Tim Logo">
                         </div>
                         <div class="brand">
-                            Creative Tim
+                            Ryan Lee
                         </div>
                     </div>
                 </a>
