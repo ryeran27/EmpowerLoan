@@ -40,7 +40,7 @@ div.content {
   
       <div class="content">
   
-  
+        <a class="btn btn-link float-right" href="/" role="button">Home</a>
         <h3>Login</h3>
         <hr />
         <form>
