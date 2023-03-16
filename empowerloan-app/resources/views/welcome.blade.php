@@ -68,7 +68,7 @@
                             <h5 class="text-justify">Microfinance software provider EmpowerLoan gives microfinance institutions (MFIs) a platform to run their businesses and offer for their customers more effectively. The software is made to assist MFIs in streamlining their procedures and automating many of their operations so they can concentrate more on providing their clients with excellent service and expanding their business.</h5>
                         </div>
                         <div class="buttons">
-                            <button class="btn btn-fill btn-neutral">
+                            {{-- <button class="btn btn-fill btn-neutral">
                             <i class="fa fa-apple"></i> Appstore
                             </button>
                             <button class="btn btn-simple btn-neutral">
@@ -76,7 +76,7 @@
                             </button>
                             <button class="btn btn-simple btn-neutral">
                             <i class="fa fa-windows"></i>
-                            </button>
+                            </button> --}}
                             <a href="{{ route('login') }}" class="btn btn-fill btn-info" data-button="info">Get Started</a>
                         </div>
                     </div>
@@ -107,7 +107,7 @@
                 </div> -->
             </div>
         </div>
-        <div class="section section-presentation">
+        {{-- <div class="section section-presentation">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
@@ -124,7 +124,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         {{-- <div class="section section-demo">
             <div class="container">
                 <div class="row">
@@ -168,8 +168,8 @@
                                 <i class="pe-7s-note2"></i>
                             </div>
                             <div class="text">
-                                <h4>Online Customers Management</h4>
-                                <p>All appointments sync with your Google calendar so your availability is always up to date. See your schedule at a glance from any device.</p>
+                                <h4>Loan origination</h4>
+                                <p>EmpowerLoan's software offers a rapid and easy loan origination process that enables microfinance organizations to process loan applications with ease.</p>
                             </div>
                         </div>
                     </div>
@@ -178,8 +178,8 @@
                             <div class="icon">
                                 <i class="pe-7s-bell"></i>
                             </div>
-                            <h4>Smart Notifications on hands</h4>
-                            <p>Automatic text and email reminders make sure customers always remember their upcoming appointments.</p>
+                            <h4>Loan portfolio management</h4>
+                            <p>EmpowerLoan's software helps microfinance organizations effectively track repayments and handle defaults for their loan portfolios.</p>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -187,8 +187,8 @@
                             <div class="icon">
                                 <i class="pe-7s-graph1"></i>
                             </div>
-                            <h4>Know your business better now</h4>
-                            <p>Take payments and run your business on the go, in your store and then see how it all adds up with analytics.</p>
+                            <h4>Accounting and reporting</h4>
+                            <p>EmpowerLoan's software has accounting and reporting tools that assist microfinance organizations in meeting regulatory obligations and give them information about their financial performance.</p>
                         </div>
                     </div>
                 </div>

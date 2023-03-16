@@ -36,7 +36,7 @@
             </a>
         </div>
         <div class="copyright">
-            &copy; 2016 <a href="http://www.creative-tim.com">Creative Tim</a>, made with love
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
         </div>
     </div>
 </footer>
