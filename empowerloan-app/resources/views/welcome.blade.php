@@ -65,7 +65,7 @@
                         <div class="description">
                             <h2>Empower Loan</h2>
                             {{-- <br> --}}
-                            <h5 class="text-justify">Microfinance software provider EmpowerLoan gives microfinance institutions (MFIs) a platform to run their businesses and offer for their customers more effectively. The software is made to assist MFIs in streamlining their procedures and automating many of their operations so they can concentrate more on providing their clients with excellent service and expanding their business.</h5>
+                            <h5 class="text-justify">Microfinance web-app provider EmpowerLoan gives microfinance institutions (MFIs) a platform to run their businesses and offer for their customers more effectively. The web-app is made to assist MFIs in streamlining their procedures and automating many of their operations so they can concentrate more on providing their clients with excellent service and expanding their business.</h5>
                         </div>
                         <div class="buttons">
                             {{-- <button class="btn btn-fill btn-neutral">
@@ -88,9 +88,9 @@
             <div class="container text-justify">
                 <h4 class="header-text">Benefits</h4>
                 <p>
-                    <strong>Enhanced Efficiency:</strong> The EmpowerLoan software assists MFIs in streamlining their processes and automating many of their responsibilities. As a result, less time and money are needed to manage their businesses.<br><br>
+                    <strong>Enhanced Efficiency:</strong> The EmpowerLoan web-app assists MFIs in streamlining their processes and automating many of their responsibilities. As a result, less time and money are needed to manage their businesses.<br><br>
 
-                    <strong>Increased Customer Service:</strong> MFIs may provide their consumers quicker, more convenient service using the software's loan application and mobile app, increasing client retention and satisfaction.<br><br>
+                    <strong>Increased Customer Service:</strong> MFIs may provide their consumers quicker, more convenient service using the web-app's loan application and mobile app, increasing client retention and satisfaction.<br><br>
 
                     <strong>Improved Reporting:</strong> The reporting capabilities of the program enable MFIs to provide thorough reports on their loan portfolio, savings accounts, and financial transactions, giving them insights into their operational performance and identifying potential areas for development.<br><br>
 
@@ -170,7 +170,7 @@
                             </div>
                             <div class="text">
                                 <h4>Loan origination</h4>
-                                <p>EmpowerLoan's software offers a rapid and easy loan origination process that enables microfinance organizations to process loan applications with ease.</p>
+                                <p>EmpowerLoan's web-app offers a rapid and easy loan origination process that enables microfinance organizations to process loan applications with ease.</p>
                             </div>
                         </div>
                     </div>
@@ -180,7 +180,7 @@
                                 <i class="pe-7s-bell"></i>
                             </div>
                             <h4>Loan portfolio management</h4>
-                            <p>EmpowerLoan's software helps microfinance organizations effectively track repayments and handle defaults for their loan portfolios.</p>
+                            <p>EmpowerLoan's web-app helps microfinance organizations effectively track repayments and handle defaults for their loan portfolios.</p>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -189,7 +189,7 @@
                                 <i class="pe-7s-graph1"></i>
                             </div>
                             <h4>Accounting and reporting</h4>
-                            <p>EmpowerLoan's software has accounting and reporting tools that assist microfinance organizations in meeting regulatory obligations and give them information about their financial performance.</p>
+                            <p>EmpowerLoan's web-app has accounting and reporting tools that assist microfinance organizations in meeting regulatory obligations and give them information about their financial performance.</p>
                         </div>
                     </div>
                 </div>
