@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Empower Loan - Admin</title>
+    <title>Empower Loan | {{ Route::currentRouteName() }}</title>
 
     <!-- Custom fonts for this template-->
     <link href="{{ asset('fronts/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
@@ -58,51 +58,23 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOfficer"
-                    aria-expanded="true" aria-controls="collapseOfficer">
+                <a class="nav-link" href="{{ route('list-officer') }}">
                     <i class="fa fa-user" aria-hidden="true"></i>
-                    <span>Loan Officer</span>
-                </a>
-                <div id="collapseOfficer" class="collapse" aria-labelledby="headingOfficer" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Officer Info:</h6>
-                        <a class="collapse-item" href="buttons.html">Add Officer</a>
-                        <a class="collapse-item" href="cards.html">Officer List</a>
-                    </div>
-                </div>
+                    <span>Loan Officer</span></a>
             </li>
-
+            
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseGroup"
-                    aria-expanded="true" aria-controls="collapseGroup">
+                <a class="nav-link" href="{{ route('list-officer') }}">
                     <i class="fa fa-users" aria-hidden="true"></i>
-                    <span>Group</span>
-                </a>
-                <div id="collapseGroup" class="collapse" aria-labelledby="headingGroup"
-                    data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Group Info:</h6>
-                        <a class="collapse-item" href="utilities-color.html">Add Group</a>
-                        <a class="collapse-item" href="utilities-border.html">Group List </a>
-                    </div>
-                </div>
+                    <span>Group</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseClient"
-                    aria-expanded="true" aria-controls="collapseClient">
+                <a class="nav-link" href="{{ route('list-officer') }}">
                     <i class="fa fa-user-plus" aria-hidden="true"></i>
-                    <span>Client</span>
-                </a>
-                <div id="collapseClient" class="collapse" aria-labelledby="headingClient"
-                    data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Client Info:</h6>
-                        <a class="collapse-item" href="utilities-color.html">Add Client</a>
-                        <a class="collapse-item" href="utilities-border.html">Client List</a>
-                    </div>
-                </div>
+                    <span>Client</span></a>
             </li>
+           
             <!-- Divider -->
             <hr class="sidebar-divider">
 
