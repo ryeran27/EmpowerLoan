@@ -12,10 +12,10 @@
                 <span class="icon-bar bar2"></span>
                 <span class="icon-bar bar3"></span>
                 </button>
-                <a href="http://www.creative-tim.com">
+                <a href="#">
                     <div class="logo-container">
                         <div class="logo">
-                            <img src="{{ asset('landing/assets/img/new_logo.png') }}" alt="Creative Tim Logo">
+                            <img src="{{ asset('landing/assets/img/new_logo1.jpg') }}" alt="Creative Tim Logo">
                         </div>
                         <div class="brand">
                             Ryan Lee
@@ -78,6 +78,7 @@
                             <i class="fa fa-windows"></i>
                             </button> --}}
                             <a href="{{ route('login') }}" class="btn btn-fill btn-info" data-button="info">Get Started</a>
+                            <a href="#" class="btn btn-fill btn-warning" data-button="warning">Make a Donate</a>
                         </div>
                     </div>
                 </div>
