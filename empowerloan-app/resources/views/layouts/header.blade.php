@@ -60,7 +60,7 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOfficer"
                     aria-expanded="true" aria-controls="collapseOfficer">
-                    <i class="fas fa-fw fa-cog"></i>
+                    <i class="fa fa-user" aria-hidden="true"></i>
                     <span>Loan Officer</span>
                 </a>
                 <div id="collapseOfficer" class="collapse" aria-labelledby="headingOfficer" data-parent="#accordionSidebar">
@@ -76,7 +76,7 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseGroup"
                     aria-expanded="true" aria-controls="collapseGroup">
-                    <i class="fas fa-fw fa-wrench"></i>
+                    <i class="fa fa-users" aria-hidden="true"></i>
                     <span>Group</span>
                 </a>
                 <div id="collapseGroup" class="collapse" aria-labelledby="headingGroup"
@@ -91,7 +91,7 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseClient"
                     aria-expanded="true" aria-controls="collapseClient">
-                    <i class="fas fa-fw fa-wrench"></i>
+                    <i class="fa fa-user-plus" aria-hidden="true"></i>
                     <span>Client</span>
                 </a>
                 <div id="collapseClient" class="collapse" aria-labelledby="headingClient"
@@ -115,7 +115,7 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLoan"
                     aria-expanded="true" aria-controls="collapseLoan">
-                    <i class="fas fa-fw fa-cog"></i>
+                    <i class="fa fa-suitcase" aria-hidden="true"></i>
                     <span>Loan</span>
                 </a>
                 <div id="collapseLoan" class="collapse" aria-labelledby="headingLoan" data-parent="#accordionSidebar">
@@ -134,7 +134,7 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSavings"
                     aria-expanded="true" aria-controls="collapseSavings">
-                    <i class="fas fa-fw fa-wrench"></i>
+                    <i class="fa fa-list-ol" aria-hidden="true"></i>
                     <span>Savings</span>
                 </a>
                 <div id="collapseSavings" class="collapse" aria-labelledby="headingSavings"
@@ -151,7 +151,7 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseMicroinsurance"
                     aria-expanded="true" aria-controls="collapseMicroinsurance">
-                    <i class="fas fa-fw fa-wrench"></i>
+                    <i class="fa fa-plus-square" aria-hidden="true"></i>
                     <span>Microinsurance</span>
                 </a>
                 <div id="collapseMicroinsurance" class="collapse" aria-labelledby="headingMicroinsurance"
@@ -168,7 +168,7 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAccounting"
                     aria-expanded="true" aria-controls="collapseAccounting">
-                    <i class="fas fa-fw fa-wrench"></i>
+                    <i class="fa fa-book" aria-hidden="true"></i>
                     <span>Accounting</span>
                 </a>
                 <div id="collapseAccounting" class="collapse" aria-labelledby="headingAccounting"
@@ -185,7 +185,7 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOthers"
                     aria-expanded="true" aria-controls="collapseOthers">
-                    <i class="fas fa-fw fa-wrench"></i>
+                    <i class="fa fa-asterisk" aria-hidden="true"></i>
                     <span>Others</span>
                 </a>
                 <div id="collapseOthers" class="collapse" aria-labelledby="headingOthers"
