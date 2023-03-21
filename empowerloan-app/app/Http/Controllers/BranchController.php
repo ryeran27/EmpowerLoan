@@ -11,7 +11,10 @@ class BranchController extends Controller
         $this->middleware('auth');
     }
     public function branch_list(){
-        $branches = Branch::all();
+        $branches = Branch::orderBy('branch_name', 'asc')->paginate(
+            $perPage = 10, $columns = ['*'], $pageName = 'branches'
+        );
+
         return view('branches.branch-list',compact('branches'));
     }
     function add_branch(Request $request){

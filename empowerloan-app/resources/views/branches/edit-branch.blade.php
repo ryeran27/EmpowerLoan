@@ -10,7 +10,7 @@
                 <div class="card-body ">
                     <div class="card-header card-title">
                         <div class="d-flex align-items-center">
-                          <h2 class="d-none d-lg-block text-primary">Add Branch</h2>
+                          <h2 class="d-none d-lg-block text-primary">Edit Branch</h2>
                           {{-- <div class="ml-auto">
                             <a href="{{ route('admin.hotel-list') }}" class="btn btn-primary"><i class="fa fa-list"></i> List</a>
                           </div> --}}

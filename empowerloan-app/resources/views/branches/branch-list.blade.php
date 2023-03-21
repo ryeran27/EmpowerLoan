@@ -23,7 +23,6 @@
                         <th>Branch Name</th>
                         <th>Branch Address</th>
                         <th>Branch Manager</th>
-                        <th>Phone</th>
                         <th>Status</th>
                         <th>Actions</th>
                       </tr>
@@ -47,10 +46,10 @@
                      
                     </tbody>
                   </table>
-                  {{-- {{ $pasenger->links() }} --}}
+                  {{ $branches->links() }}
                   <p>
-                    {{-- Displaying {{$pasenger->count()}} of {{ $pasenger->total() }} passenger(s). --}}
-                    {{-- Showing {{($pasenger->currentPage()-1)* $pasenger->perPage()+($pasenger->total() ? 1:0)}} to {{($pasenger->currentPage()-1)*$pasenger->perPage()+count($pasenger)}}  of  {{$pasenger->total()}}  Results --}}
+                    Displaying {{$branches->count()}} of {{ $branches->total() }} passenger(s).
+                    Showing {{($branches->currentPage()-1)* $branches->perPage()+($branches->total() ? 1:0)}} to {{($branches->currentPage()-1)*$branches->perPage()+count($branches)}}  of  {{$branches->total()}}  Results
                 </p>
                 </div>
               </div>
