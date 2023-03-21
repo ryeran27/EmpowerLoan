@@ -43,8 +43,8 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('home') }}">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                <a class="nav-link" href="{{ route('branch-list') }}">
+                    <i class="fa fa-home" aria-hidden="true"></i>
                     <span>Branch</span></a>
             </li>
 
