@@ -27,3 +27,6 @@ Route::get('/list-officer', [OfficerController::class, 'list_officer'])->name('l
 Route::get('/branch-list', [BranchController::class, 'branch_list'])->name('branch-list');
 Route::get('add-branch', [BranchController::class, 'add_branch'])->name('add-branch');
 Route::post('insert-branch', [BranchController::class, 'insert_branch'])->name('insert-branch');
+Route::get('edit-branch/{id}', [BranchController::class, 'edit_branch'])->name('edit-branch');
+Route::post('update-branch/{id}', [BranchController::class, 'update_branch'])->name('update-branch');
+Route::get('delete-branch/{id}',[BranchController::class, 'delete_branch'])->name('delete-branch');

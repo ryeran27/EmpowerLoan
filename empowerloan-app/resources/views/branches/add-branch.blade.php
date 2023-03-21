@@ -39,6 +39,11 @@
                             @endif
                             @csrf 
                             <div class="form-group">
+                                <label for="inputCaption1">Branch Code</label>
+                                <input type="text" name="branch_code" class="form-control" required placeholder="Enter Branch Code">
+                                <span class="text-danger">@error('branch_code'){{ $message }}@enderror</span>
+                            </div>
+                            <div class="form-group">
                                 <label for="inputCaption1">Branch Name</label>
                                 <input type="text" name="branch_name" class="form-control" required placeholder="Enter Branch Name">
                                 <span class="text-danger">@error('branch_name'){{ $message }}@enderror</span>

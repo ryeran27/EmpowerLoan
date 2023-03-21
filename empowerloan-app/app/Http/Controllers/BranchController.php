@@ -11,9 +11,7 @@ class BranchController extends Controller
         $this->middleware('auth');
     }
     public function branch_list(){
-        $branches = Branch::orderBy('branch_name', 'asc')->paginate(
-            $perPage = 10, $columns = ['*'], $pageName = 'branches'
-        );
+        $branches = Branch::orderBy('branch_code','asc')->get();
 
         return view('branches.branch-list',compact('branches'));
     }
@@ -22,16 +20,42 @@ class BranchController extends Controller
     }
     function insert_branch(Request $request){
         $request->validate([
+            'branch_code'=>'required|unique:branches',
             'branch_name'=>'required',
             'branch_manager'=>'required',
             'branch_address'=>'required',
          ]);
-         $branch = new Branch();
-            $branch->branch_name = $request->input('branch_name');
-            $branch->branch_manager = $request->input('branch_manager');
-            $branch->branch_address = $request->input('branch_address');
+            $branch = new Branch();
+            $branch->branch_code = trim($request->input('branch_code'));
+            $branch->branch_name = trim($request->input('branch_name'));
+            $branch->branch_manager = trim($request->input('branch_manager'));
+            $branch->branch_address = trim($request->input('branch_address'));
             $branch->status = "Active";
             $branch->save();
         return redirect()->back()->with('success','Branch Added Successfully');
+    }
+    public function edit_branch($id){
+        $branches = Branch::find($id);
+        return view('branches.edit-branch',['branches'=>$branches]);
+    }
+    public  function update_branch(Request $request,$id){
+        $request->validate([
+            'branch_name'=>'required',
+            'branch_manager'=>'required',
+            'branch_address'=>'required',
+         ]);
+         $branches = Branch::find($id);
+        //  $branches->branch_code = trim($request->input('branch_code'));
+         $branches->branch_name = trim($request->input('branch_name'));
+         $branches->branch_manager = trim($request->input('branch_manager'));
+         $branches->branch_address = trim($request->input('branch_address'));
+         $branches->status = $request->input('status');
+        $branches->update();
+       return redirect()->back()->with('success','Update Successfully!');
+   }
+   public function delete_branch($id)
+    {
+        Branch::where('id',$id)->delete();
+        return redirect()->back()->with('delete','Delete Successful');
     }
 }
