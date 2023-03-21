@@ -12,7 +12,8 @@ class OfficerController extends Controller
     }
 
     public function list_officer(){
-        return view('Officer.list-officer');
+        $officers = Officer::all();
+        return view('Officer.list-officer',compact('officers'));
     }
     // function add_officer(Request $request){
     //     $request->validate([

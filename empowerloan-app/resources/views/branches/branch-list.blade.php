@@ -20,8 +20,7 @@
                     <thead>
                       <tr>
                         <th>#</th>
-                        <th>Branch</th>
-                        <th>Emp No</th>
+                        <th>Employee No</th>
                         <th>Name</th>
                         <th>Email</th>
                         <th>Birthdate</th>
@@ -37,12 +36,11 @@
                       <tr>
                        
                         <td>{{ $index+1 }}</td>
-                        <td>{{ $officer->branch_id }}</td>
                         <td>{{ $officer->emp_no }}</td>
                         <td>{{ $officer->name }}</td>
                         <td>{{ $officer->email }}</td>
                         <td>{{ $officer->dob }}</td>
-                        <td>{{ $officer->age }}</td>
+                        <td>{{ $officer->emp_no }}</td>
                         <td>{{ $officer->gender }}</td>
                         <td>{{ $officer->phone }}</td>
                         <td>{{ $officer->status }}</td>

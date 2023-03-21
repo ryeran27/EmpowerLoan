@@ -15,10 +15,13 @@ class CreateOfficersTable extends Migration
     {
         Schema::create('officers', function (Blueprint $table) {
             $table->id();
+            $table->integer('branch_id');
             $table->string('emp_no');
             $table->string('name');
             $table->string('email');
             $table->date('joining_date');
+            $table->date('dob');
+            $table->integer('age');
             $table->string('gender');
             $table->string('address');
             $table->string('phone');
