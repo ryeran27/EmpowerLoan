@@ -15,7 +15,7 @@ class CreateOfficersTable extends Migration
     {
         Schema::create('officers', function (Blueprint $table) {
             $table->id();
-            $table->integer('branch_id');
+            $table->string('branch_code');
             $table->string('emp_no');
             $table->string('name');
             $table->string('email');

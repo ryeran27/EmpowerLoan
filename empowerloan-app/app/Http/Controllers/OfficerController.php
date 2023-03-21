@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Branch;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 use App\Models\Officer;
 class OfficerController extends Controller
 {
@@ -12,27 +14,44 @@ class OfficerController extends Controller
     }
 
     public function list_officer(){
-        $officers = Officer::all();
+        $officers = Officer::OrderBy('name','asc')->get();
         return view('Officer.list-officer',compact('officers'));
     }
-    // function add_officer(Request $request){
-    //     $request->validate([
-    //         'fullname'=>'required',
-    //         'contact_no'=>'required',
-    //         'address'=>'required',
-    //         'total_amount'=>'required',
-    //         'reference_no'=>'required',
-    //      ]);
-    //      $officer = new Officer;
-    //             $officer->reference_no = strtoupper($request->input('reference_no'));
-    //             $officer->status_pay = 1;
-    //             $officer->status = 'Paid';
-    //             $officer->fullname = $request->input('fullname');
-    //             $officer->contact_no = $request->input('contact_no');
-    //             $officer->address = $request->input('address');
-    //             $officer->total_amount = $request->input('total_amount');
-    //             $officer->mode_officer = 'Walk-In';
-    //             $officer->save();
-    //     return redirect()->back()->with('success','Payment Added Successfully');
-    // }
+
+   function add_officer(Request $request){
+        $branches = Branch::Where('status','Active')->get();
+        return view('Officer.add-officer',compact('branches'));
+    }
+    function insert_officer(Request $request){
+        $request->validate([
+            'emp_no'=>'required',
+            'name'=>'required',
+            'email'=>'required',
+            'joining_date'=>'required',
+            'dob'=>'required',
+            'gender'=>'required',
+            'address'=>'required',
+            'phone'=>'required',
+            'educational'=>'required',
+            'contact_person'=>'required',
+            'contact_no'=>'required',
+         ]);
+            $officers = new Officer();
+            $officers->branch_code = trim($request->input('branch_code'));
+            $officers->emp_no = trim($request->input('emp_no'));
+            $officers->name = trim($request->input('name'));
+            $officers->email = trim($request->input('email'));
+            $officers->joining_date = $request->input('joining_date');
+            $officers->dob = $request->input('dob');
+            $officers->age = Carbon::parse($request->input('dob'))->age;
+            $officers->gender = $request->input('gender');
+            $officers->address = trim($request->input('address'));
+            $officers->phone = $request->input('phone');
+            $officers->educational = $request->input('educational');
+            $officers->contact_person = $request->input('contact_person');
+            $officers->contact_no = $request->input('contact_no');
+            $officers->status = "Active";
+            $officers->save();
+        return redirect()->back()->with('success','Loan Officer Added Successfully');
+    }
 }
