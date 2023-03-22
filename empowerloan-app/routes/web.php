@@ -34,3 +34,6 @@ Route::get('delete-branch/{id}',[BranchController::class, 'delete_branch'])->nam
 Route::get('/list-officer', [OfficerController::class, 'list_officer'])->name('list-officer');
 Route::get('add-officer', [OfficerController::class, 'add_officer'])->name('add-officer');
 Route::post('insert-officer', [OfficerController::class, 'insert_officer'])->name('insert-officer');
+Route::get('edit-officer/{id}', [OfficerController::class, 'edit_officer'])->name('edit-officer');
+Route::post('update-officer/{id}', [OfficerController::class, 'update_officer'])->name('update-officer');
+Route::get('delete-officer/{id}',[OfficerController::class, 'delete_officer'])->name('delete-officer');

@@ -21,14 +21,11 @@
                           <thead>
                               <tr>
                                 <th>#</th>
-                                <th>Branch</th>
                                 <th>Emp No</th>
                                 <th>Name</th>
-                                <th>Email</th>
                                 <th>Birthdate</th>
                                 <th>Age</th>
                                 <th>Gender</th>
-                                <th>Phone</th>
                                 <th>Status</th>
                                 <th>Actions</th>
                               </tr>
@@ -36,14 +33,11 @@
                           <tfoot>
                               <tr>
                                 <th>#</th>
-                                <th>Branch</th>
                                 <th>Emp No</th>
                                 <th>Name</th>
-                                <th>Email</th>
                                 <th>Birthdate</th>
                                 <th>Age</th>
                                 <th>Gender</th>
-                                <th>Phone</th>
                                 <th>Status</th>
                                 <th>Actions</th>
                               </tr>
@@ -52,10 +46,11 @@
                             @foreach ($officers as $index => $officer)
                             <tr>
                               <td>{{ $index+1 }}</td>
-                              <td>{{ $officer->branch_code }}</td>
-                              <td>{{ $officer->branch_name }}</td>
-                              <td>{{ $officer->branch_address }}</td>
-                              <td>{{ $officer->branch_manager }}</td>
+                              <td>{{ $officer->emp_no }}</td>
+                              <td>{{ $officer->name }}</td>
+                              <td>{{ $officer->dob }}</td>
+                              <td>{{ $officer->age }}</td>
+                              <td>{{ $officer->gender }}</td>
                               <td>@if ($officer->status == "Active")
                                 <label class="badge badge-success py-1">Active</label>
                                 @else
@@ -63,11 +58,11 @@
                                 @endif</td>
                               <td>
                                 <a href="#" class="btn btn-rounded btn-icon btn-outline-info" data-toggle="modal" data-target="#exampleModalCenter{{ $officer->id }}" title="Show"><i class="fa fa-eye"></i></a>
-                                <a href="{{ route('edit-branch',['id'=>$officer->id]) }}" class="btn btn-rounded btn-icon btn-outline-secondary" title="Edit"><i class="fa fa-edit"></i></a>
-                                <a href="{{ route('delete-branch',['id'=>$officer->id]) }}" class="btn btn-rounded btn-icon btn-outline-danger" title="Delete" onclick=" return confirm('Are you sure?')"><i class="fa fa-times"></i></a>
+                                <a href="{{ route('edit-officer',['id'=>$officer->id]) }}" class="btn btn-rounded btn-icon btn-outline-secondary" title="Edit"><i class="fa fa-edit"></i></a>
+                                <a href="{{ route('delete-officer',['id'=>$officer->id]) }}" class="btn btn-rounded btn-icon btn-outline-danger" title="Delete" onclick=" return confirm('Are you sure?')"><i class="fa fa-times"></i></a>
                                 <!-- Modal -->
-                                <div class="modal fade" id="exampleModalCenter{{ $officer->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                                  <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal fade bd-example-modal-lg" id="exampleModalCenter{{ $officer->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                                   <div class="modal-content">
                                       <div class="modal-header">
                                       <h5 class="modal-title" id="exampleModalLongTitle">{{ $officer->name }}</h5>
@@ -77,35 +72,76 @@
                                       </div>
                                       <div class="modal-body">
                                         <div class="row">
-                                          <div class="col-md-12">
-                                            <label for="name">Code</label>
-                                            <input type="text" name="branch_code" readonly class="form-control" value="{{ $officer->branch_code }}"/>
+                                          <div class="col-md-6">
+                                            <label for="branch">Branch Code</label>
+                                            <input type="text" name="branch_code" disabled class="form-control" value="{{ $officer->branch_code }}"/>
+                                          </div>
+                                          <div class="col-md-6">
+                                            <label for="emp_no">Emp No</label>
+                                            <input type="text" name="emp_no"  disabled class="form-control" value="{{ $officer->emp_no }}"/>
                                           </div>
                                       </div>
                                           <div class="row">
-                                              <div class="col-md-12">
-                                                <label for="name">Branch</label>
-                                                <input type="text" name="branch_name" readonly class="form-control" value="{{ $officer->branch_name }}"/>
-                                              </div>
+                                            <div class="col-md-6">
+                                              <label for="name">Name</label>
+                                              <input type="text" name="name" disabled class="form-control" value="{{ $officer->name }}"/>
+                                            </div>
+                                            <div class="col-md-6">
+                                              <label for="email">Email</label>
+                                              <input type="text" name="email"  disabled class="form-control" value="{{ $officer->email }}"/>
+                                            </div>
                                           </div>
                                           <div class="row">
-                                              <div class="col-md-12">
-                                                <label for="name">Address</label>
-                                                <input type="text" name="branch_address" readonly class="form-control" value="{{ $officer->branch_address }}"/>
-                                              </div>
-                                          </div>
-                                          <div class="row">
-                                            <div class="col-md-12">
-                                              <label for="name">Manager</label>
-                                              <input type="text" name="branch_manager" readonly class="form-control" value="{{ $officer->branch_manager }}"/>
+                                            <div class="col-md-6">
+                                              <label for="joining_date">Joining Date</label>
+                                              <input type="text" name="joining_date" disabled class="form-control" value="{{ $officer->joining_date }}"/>
+                                            </div>
+                                            <div class="col-md-6">
+                                              <label for="dob">Birthdate</label>
+                                              <input type="text" name="dob"  disabled class="form-control" value="{{ $officer->dob }}"/>
                                             </div>
                                         </div>
                                         <div class="row">
-                                          <div class="col-md-12">
-                                            <label for="name">Status</label>
-                                            <input type="text" name="status" readonly class="form-control" value="{{ $officer->status }}"/>
+                                          <div class="col-md-4">
+                                            <label for="age">Age</label>
+                                            <input type="text" name="age" disabled class="form-control" value="{{ $officer->age }}"/>
+                                          </div>
+                                          <div class="col-md-4">
+                                            <label for="status">Status</label>
+                                            <input type="text" name="status"  disabled class="form-control" value="{{ $officer->status }}"/>
+                                          </div>
+                                          <div class="col-md-4">
+                                            <label for="phone">Phone</label>
+                                            <input type="text" name="phone"  disabled class="form-control" value="{{ $officer->phone }}"/>
                                           </div>
                                       </div>
+                                      <div class="row">
+                                        <div class="col-md-12">
+                                          <label for="address">Address</label>
+                                          <input type="text" name="address" disabled class="form-control" value="{{ $officer->address }}"/>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="row">
+                                      <div class="col-md-6">
+                                        <label for="educational">Educational Background</label>
+                                        <input type="text" name="educational" disabled class="form-control" value="{{ $officer->educational }}"/>
+                                      </div>
+                                      <div class="col-md-6">
+                                        <label for="gender">Gender</label>
+                                        <input type="text" name="gender"  disabled class="form-control" value="{{ $officer->gender }}"/>
+                                      </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-md-6">
+                                      <label for="contact_person">Contact Person</label>
+                                      <input type="text" name="contact_person" disabled class="form-control" value="{{ $officer->contact_person }}"/>
+                                    </div>
+                                    <div class="col-md-6">
+                                      <label for="contact_no">Contact Person</label>
+                                      <input type="text" name="contact_no"  disabled class="form-control" value="{{ $officer->contact_no }}"/>
+                                    </div>
+                                </div>
                                       </div>
                                       <div class="modal-footer">
                                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
