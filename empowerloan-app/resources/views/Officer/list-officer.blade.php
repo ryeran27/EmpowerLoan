@@ -15,15 +15,34 @@
                     </div>
                   </div>
                 </div>
+                <div class="card-header col-md-4 py-3">
+                  {{-- <h6 class="m-0 font-weight-bold text-primary">Choose</h6> --}}
+                  <form class="forms-sample" action="#" method="get">
+                      @csrf 
+                    <div class="input-group">
+                      <select class="custom-select" name="searchbox">
+                        <option selected>Choose Branch...</option>
+                        @foreach ($branches as $branch)
+                        <option value="{{ $branch->branch_code }}"> 
+                            {{ $branch->branch_name }} 
+                        </option>
+                        @endforeach    
+                      </select>
+                      <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="submit">Go</button>
+                      </div>
+                    </div>
+                    </form>
+              </div>
                 <div class="card-body">
                   <div class="table-responsive">
-                      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                      <table class="table table-bordered" width="100%" cellspacing="0">
                           <thead>
                               <tr>
                                 <th>#</th>
                                 <th>Emp No</th>
                                 <th>Name</th>
-                                <th>Birthdate</th>
+                                <th>Branch Code</th>
                                 <th>Age</th>
                                 <th>Gender</th>
                                 <th>Status</th>
@@ -35,7 +54,7 @@
                                 <th>#</th>
                                 <th>Emp No</th>
                                 <th>Name</th>
-                                <th>Birthdate</th>
+                                <th>Branch Code</th>
                                 <th>Age</th>
                                 <th>Gender</th>
                                 <th>Status</th>
@@ -48,7 +67,7 @@
                               <td>{{ $index+1 }}</td>
                               <td>{{ $officer->emp_no }}</td>
                               <td>{{ $officer->name }}</td>
-                              <td>{{ $officer->dob }}</td>
+                              <td>{{ $officer->branch_code }}</td>
                               <td>{{ $officer->age }}</td>
                               <td>{{ $officer->gender }}</td>
                               <td>@if ($officer->status == "Active")

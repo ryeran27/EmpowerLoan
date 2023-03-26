@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\OfficerController;
 use App\Http\Controllers\BranchController;
+use App\Http\Controllers\GroupController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,3 +38,15 @@ Route::post('insert-officer', [OfficerController::class, 'insert_officer'])->nam
 Route::get('edit-officer/{id}', [OfficerController::class, 'edit_officer'])->name('edit-officer');
 Route::post('update-officer/{id}', [OfficerController::class, 'update_officer'])->name('update-officer');
 Route::get('delete-officer/{id}',[OfficerController::class, 'delete_officer'])->name('delete-officer');
+// Group
+Route::get('/list-group', [GroupController::class, 'list_group'])->name('list-group');
+Route::get('add-group', [GroupController::class, 'add_group'])->name('add-group');
+Route::get('getOfficers/{id}', function ($id) {
+    $officers = App\Models\Officer::where('branch_code',$id)->get();
+    return response()->json($officers);
+});
+Route::get('getOfficer/{id}', function ($id) {
+    $officers = App\Models\Officer::where('branch_code',$id)->get();
+    return response()->json($officers);
+});
+Route::post('insert-group', [GroupController::class, 'insert_group'])->name('insert-group');

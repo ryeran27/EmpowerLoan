@@ -13,9 +13,10 @@ class OfficerController extends Controller
         $this->middleware('auth');
     }
 
-    public function list_officer(){
-        $officers = Officer::OrderBy('name','asc')->get();
-        return view('Officer.list-officer',compact('officers'));
+    public function list_officer(Request $request){
+        $officers = Officer::Where('branch_code',trim($request->input('searchbox')))->OrderBy('emp_no','asc')->get();
+        $branches = Branch::Where('status','Active')->get();
+        return view('Officer.list-officer',['officers'=>$officers,'branches'=>$branches]);
     }
 
    function add_officer(Request $request){
@@ -24,7 +25,7 @@ class OfficerController extends Controller
     }
     function insert_officer(Request $request){
         $request->validate([
-            'emp_no'=>'required',
+            'emp_no'=>'required|unique:officers',
             'name'=>'required',
             'email'=>'required',
             'joining_date'=>'required',

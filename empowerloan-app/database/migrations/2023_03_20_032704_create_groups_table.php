@@ -15,13 +15,15 @@ class CreateGroupsTable extends Migration
     {
         Schema::create('groups', function (Blueprint $table) {
             $table->id();
-            $table->string('grp_name');
+            $table->string('grp_code')->unique();
+            $table->string('grp_name')->unique();
             $table->string('meeting_day');
             $table->string('grp_leader');
             $table->string('grp_leader_no');
             $table->string('grp_treasurer');
             $table->string('grp_treasurer_no');
-            $table->integer('officer_id');
+            $table->string('emp_no');
+            $table->string('branch_code');
             $table->string('meeting_place');
             $table->string('grp_distance');
             $table->date('joining_date');

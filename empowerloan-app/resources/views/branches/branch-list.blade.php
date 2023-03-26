@@ -20,9 +20,10 @@
                 {{ Session::get('delete') }}
                 </div>
                 @endif
+                
                 <div class="card-body">
                   <div class="table-responsive">
-                      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                      <table class="table table-bordered"  width="100%" cellspacing="0">
                           <thead>
                               <tr>
                                 <th>#</th>

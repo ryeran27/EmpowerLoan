@@ -65,7 +65,7 @@
             
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('list-officer') }}">
+                <a class="nav-link" href="{{ route('list-group') }}">
                     <i class="fa fa-users" aria-hidden="true"></i>
                     <span>Group</span></a>
             </li>
