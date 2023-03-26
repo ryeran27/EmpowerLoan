@@ -63,9 +63,10 @@ div.content {
                 </span>
             @enderror
           </div>
+          
           <div class="form-group">
             <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" @error('password') is-invalid @enderror id="password" name="password" required autocomplete="new-password" placeholder="Password">
+            <input type="password" class="form-control @error('password') is-invalid @enderror"  id="password" name="password" required autocomplete="new-password" placeholder="Password">
             @error('password')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
@@ -73,13 +74,8 @@ div.content {
             @enderror
           </div>
           <div class="form-group">
-            <label for="exampleInputPassword1">Confirm Password</label>
-            <input type="password" class="form-control" @error('password') is-invalid @enderror id="password-confirm" name="password_confirmation" required autocomplete="new-password" placeholder="Confirm Password">
-            @error('password')
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-            @enderror
+            <label for="password-confirm">Confirm Password</label>
+            <input type="password" class="form-control" id="password-confirm" name="password_confirmation" required autocomplete="new-password" placeholder="Confirm Password">
           </div>
           <button type="submit" class="btn btn-primary">Register</button>
           <hr />

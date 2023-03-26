@@ -6,6 +6,8 @@ use App\Models\Branch;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use App\Models\Officer;
+use Illuminate\Support\Facades\Auth;
+
 class OfficerController extends Controller
 {
     public function __construct()
@@ -52,6 +54,7 @@ class OfficerController extends Controller
             $officers->contact_person = $request->input('contact_person');
             $officers->contact_no = $request->input('contact_no');
             $officers->status = "Active";
+            $officers->owner = Auth::user()->id;
             $officers->save();
         return redirect()->back()->with('success','Loan Officer Added Successfully');
     }

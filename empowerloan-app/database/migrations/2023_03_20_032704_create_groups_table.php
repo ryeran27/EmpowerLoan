@@ -28,7 +28,7 @@ class CreateGroupsTable extends Migration
             $table->string('grp_distance');
             $table->date('joining_date');
             $table->string('status');
-            $table->string('owner');
+            $table->integer('owner');
             $table->timestamps();
         });
     }

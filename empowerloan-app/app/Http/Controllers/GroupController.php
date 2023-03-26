@@ -6,6 +6,7 @@ use App\Models\Group;
 use App\Models\Branch;
 use App\Models\Officer;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class GroupController extends Controller
 {
@@ -45,6 +46,7 @@ class GroupController extends Controller
             $groups->contact_person = $request->input('contact_person');
             $groups->contact_no = $request->input('contact_no');
             $groups->status = "Active";
+            $groups->owner = Auth::user()->id;
             $groups->save();
         return redirect()->back()->with('success','Loan Officer Added Successfully');
     }

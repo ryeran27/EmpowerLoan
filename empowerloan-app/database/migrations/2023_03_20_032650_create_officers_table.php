@@ -29,7 +29,7 @@ class CreateOfficersTable extends Migration
             $table->string('contact_person');
             $table->string('contact_no');
             $table->string('status');
-            $table->string('owner');
+            $table->integer('owner');
             $table->timestamps();
         });
     }

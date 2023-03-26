@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Branch;
+use Illuminate\Support\Facades\Auth;
+
 class BranchController extends Controller
 {
     public function __construct()
@@ -31,6 +33,7 @@ class BranchController extends Controller
             $branch->branch_manager = trim($request->input('branch_manager'));
             $branch->branch_address = trim($request->input('branch_address'));
             $branch->status = "Active";
+            $branch->owner = Auth::user()->id;
             $branch->save();
         return redirect()->back()->with('success','Branch Added Successfully');
     }

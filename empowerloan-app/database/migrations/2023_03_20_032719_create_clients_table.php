@@ -27,7 +27,7 @@ class CreateClientsTable extends Migration
             $table->integer('group_id');
             $table->date('joining_date');
             $table->string('status');
-            $table->string('owner');
+            $table->integer('owner');
             $table->timestamps();
         });
     }
