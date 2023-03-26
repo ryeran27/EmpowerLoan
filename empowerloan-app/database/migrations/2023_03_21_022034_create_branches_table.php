@@ -21,6 +21,7 @@ class CreateBranchesTable extends Migration
             $table->string('branch_address');
             $table->string('status');
             $table->integer('area_id')->default(0);
+            $table->string('owner');
             $table->timestamps();
         });
     }
